@@ -8,6 +8,10 @@
     background-color: grey;
 }
 
+a{
+    color:grey;
+}
+
 body{
     position:relative;
 }
@@ -22,7 +26,7 @@ body{
     transform: translate(-50%, -50%);
 }
 
-#impostazioni{
+#generale{
     background-color: orange;
     height:100%;
 }
@@ -60,20 +64,81 @@ body{
     display:flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.header .testo{
     margin-left:10px;
 }
 
-.info{
+.info, .chat{
     display: flex;
 }
 
-.testo .nome{
+.testo .nome, .testo .titolo{
     color:#000;
 }
 
-.testo .ultimo-accesso{
+.ultimo-accesso, .istruzione{
     font-size: 16px;
+}
+
+.chat{
+    height:70px;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid grey;
+    display:flex;
+    align-items: center;
+    position: relative;
+    color:grey;
+}
+
+.chat:hover{
+    background-color: lightgrey;
+}
+
+.chat .ultimo-accesso{
+    position:absolute;
+    top:20px;
+    right:15px;
+}
+
+#cronologia-chat{
+    overflow-y: scroll;
+    height:calc(100% - 70px - 70px - 40px);
+}
+
+#notifiche-desktop{
+    background-color: lightblue;
+    height:70px;
+    padding: 10px;
+    display:flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+#notifiche-desktop .icona{
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    color: lightblue;
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+}
+
+.icona i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+}
+
+#cerca-contatti{
+    height:40px;
+    background-color: lightgrey;
+    color: lightgrey;
+    font-size: 16px;
+}
+
+#cerca{
+    background-color: #fff;
 }
