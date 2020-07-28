@@ -22,13 +22,58 @@ body{
     transform: translate(-50%, -50%);
 }
 
-
-/* da cancellare */
-.bg-orange{
+#impostazioni{
     background-color: orange;
     height:100%;
 }
-.bg-tomato{
+#chat{
     background-color: tomato;
     height:100%;
+}
+
+.header{
+    height:70px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgrey;
+    color:grey;
+    font-size: 20px;
+    padding:10px;
+}
+
+.header i{
+    padding: 0 5px;
+}
+
+.foto-profilo{
+    height:60px;
+}
+
+.foto-profilo img{
+    height:inherit;
+    border-radius: 50px;
+
+}
+
+.testo{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header .testo{
+    margin-left:10px;
+}
+
+.info{
+    display: flex;
+}
+
+.testo .nome{
+    color:#000;
+}
+
+.testo .ultimo-accesso{
+    font-size: 16px;
 }
