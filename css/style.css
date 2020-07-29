@@ -242,12 +242,15 @@ input:focus{
     padding-left: 15px;
 }
 
+.display-block{
+    display:block;
+}
 
-/* DA FARE
-- icon invio messaggio quando input messaggio è selezionato / ha contenuto
-- pulire value di #messaggio
+.display-none{
+    display:none;
+}
 
-BONUS
+/* BONUS
 - remove message
 - triangolo vignettina
 - ora di invio aggiornata ovunque (col sx e ultima volta online)

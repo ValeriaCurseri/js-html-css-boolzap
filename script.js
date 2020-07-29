@@ -4,13 +4,30 @@
 
 // B. Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
 
-var nuovoMessaggio = $('#messaggio').keyup(nuovoMessaggio);
+// mostro l'aeroplanino invece del microfono al click su input #messaggio
+$('#messaggio').click(function(){
+    $('#strumenti .fa-microphone').addClass('display-none');
+    $('#strumenti .fa-paper-plane').removeClass('display-none');
+});
+
+// all'invio e al click sull'aeroplanino invio il messaggio e genero una risposta automatica
+
+var invio = false;
+
+$('#strumenti .fa-paper-plane').click(function(){
+    invio = true;
+})
+
+$('#messaggio').keyup(nuovoMessaggio);
+
+$('#strumenti .fa-paper-plane').click(nuovoMessaggio);
 
 function nuovoMessaggio(){
-    if(event.keyCode == 13 || event.which == 13){       // se il tasto rilasciato è INVIO
-        var contenutoMessaggio = $(this).val();         // memorizzo il valore di input
-        nuovo(contenutoMessaggio,'inviato');            // genero il mio messaggio con la fz nuovo
-        setTimeout(nuovo('Bella!','ricevuto'),30000);   // genero la risposta automatica con la fz nuovo - NOTA: NON FUNZIONA IL DELAY
+    if(event.keyCode == 13 || event.which == 13 || invio == true){       // se il tasto rilasciato è INVIO
+        var contenutoMessaggio = $('#messaggio').val();                 // memorizzo il valore di input
+        nuovo(contenutoMessaggio,'inviato');                            // genero il mio messaggio con la fz nuovo
+        setTimeout(nuovo('Bella!','ricevuto'),30000);                   // genero la risposta automatica con la fz nuovo - NOTA: NON FUNZIONA IL DELAY
+        $('#messaggio').val('');                                                // pulisco il campo di input
     }
 }
 
