@@ -38,14 +38,6 @@ body{
     background-color: #fff;
     height:100%;
 }
-#chat{
-    background-image: url('../img/Ocean_orizz.jpg');
-    background-color: blue;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height:100%;
-}
 
 .header{
     height:70px;
@@ -170,11 +162,13 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
-#cerca input{
+input{
     border:none;
-
+    border-radius: 5px;
+    font-size: 14px;
 }
 
 ::-webkit-input-placeholder {
@@ -186,3 +180,42 @@ body{
 ::-ms-input-placeholder {
     color:#b3b4b6;
 }
+
+#chat{
+    height:100%;
+    background-image: url('../img/Ocean_orizz.jpg');
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#conversazione{
+    height:calc(100% - 70px - 70px);
+    padding:30px 40px;
+}
+
+#strumenti{
+    height:70px;
+    width: 100%;
+    position: relative;
+    right: -15px;
+    background-color: #f3eeea;
+    color:#6b747a;
+    display: flex;
+    align-items: center;
+    font-size:20px;
+}
+
+#strumenti input{
+    height: 50px;
+    padding-left: 15px;
+}
+
+
+/* DA FARE
+- icon invio messaggio quando input messaggio è selezionato / ha contenuto
+
+PERCHE
+- ho dovuto aggiungere position, right, e width a #strumenti?
+ */
