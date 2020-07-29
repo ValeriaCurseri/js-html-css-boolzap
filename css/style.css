@@ -246,6 +246,10 @@ input:focus{
 /* DA FARE
 - icon invio messaggio quando input messaggio è selezionato / ha contenuto
 
+BONUS
+- remove message
+- triangolo vignettina
+
 PERCHE
 - ho dovuto aggiungere position, right, e width a #strumenti?
  */
