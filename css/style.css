@@ -245,10 +245,13 @@ input:focus{
 
 /* DA FARE
 - icon invio messaggio quando input messaggio è selezionato / ha contenuto
+- pulire value di #messaggio
 
 BONUS
 - remove message
 - triangolo vignettina
+- ora di invio aggiornata ovunque (col sx e ultima volta online)
+- anteprima ultimo messaggio in col sx
 
 PERCHE
 - ho dovuto aggiungere position, right, e width a #strumenti?
