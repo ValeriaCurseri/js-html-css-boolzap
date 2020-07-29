@@ -1,19 +1,27 @@
-.bg-top{
-    height:15vh;
-    background-color: green;
-}
+/* tipografia */
 
-.bg-bottom{
-    height:85vh;
-    background-color: grey;
+h1, h2, h3, h4, h5, h6, p, span{
+    font-family: Helvetica,Arial,sans-serif;;
 }
 
 a{
     color:grey;
 }
 
+/* struttura */
+
 body{
     position:relative;
+}
+
+.bg-top{
+    height:15vh;
+    background-color: #009788;
+}
+
+.bg-bottom{
+    height:85vh;
+    background-color: #d6dbd7;
 }
 
 #main{
@@ -27,11 +35,15 @@ body{
 }
 
 #generale{
-    background-color: orange;
+    background-color: #fff;
     height:100%;
 }
 #chat{
-    background-color: tomato;
+    background-image: url('../img/Ocean_orizz.jpg');
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height:100%;
 }
 
@@ -40,9 +52,9 @@ body{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    background-color: lightgrey;
-    color:grey;
-    font-size: 20px;
+    background-color: #eaeaea;
+    color:#b1b1b1;
+    font-size: 16px;
     padding:10px;
 }
 
@@ -76,14 +88,14 @@ body{
 }
 
 .ultimo-accesso, .istruzione{
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .chat{
     height:70px;
     padding: 10px;
     background-color: #fff;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #f9f9f9;
     display:flex;
     align-items: center;
     position: relative;
@@ -91,12 +103,12 @@ body{
 }
 
 .chat:hover{
-    background-color: lightgrey;
+    background-color: #e9ebea;
 }
 
 .chat .ultimo-accesso{
     position:absolute;
-    top:20px;
+    top:16px;
     right:15px;
 }
 
@@ -106,19 +118,19 @@ body{
 }
 
 #notifiche-desktop{
-    background-color: lightblue;
+    background-color: #90dbfb;
     height:70px;
     padding: 10px;
     display:flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #notifiche-desktop .icona{
     height: 50px;
     width: 50px;
     background-color: #fff;
-    color: lightblue;
+    color: #90dbfb;
     border-radius: 50px;
     display: inline-block;
     position: relative;
@@ -134,11 +146,43 @@ body{
 
 #cerca-contatti{
     height:40px;
-    background-color: lightgrey;
-    color: lightgrey;
+    background-color: #f9f9f9;
+    color: #b3b4b6;
     font-size: 16px;
+    position:relative;
 }
 
 #cerca{
+    width:95%;
+    height:70%;
+    border-radius: 5px;
+    border:1px solid lightgrey;
     background-color: #fff;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+}
+
+#cerca label{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cerca input{
+    border:none;
+
+}
+
+::-webkit-input-placeholder {
+    color:#b3b4b6;
+}
+::-moz-input-placeholder {
+    color:#b3b4b6;
+}
+::-ms-input-placeholder {
+    color:#b3b4b6;
 }
