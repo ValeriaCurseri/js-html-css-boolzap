@@ -23,11 +23,15 @@ $('#messaggio').keyup(nuovoMessaggio);
 $('#strumenti .fa-paper-plane').click(nuovoMessaggio);
 
 function nuovoMessaggio(){
-    if(event.keyCode == 13 || event.which == 13 || invio == true){       // se il tasto rilasciato è INVIO
+    if(event.keyCode == 13 || event.which == 13 || invio == true){      // se il tasto rilasciato è INVIO
         var contenutoMessaggio = $('#messaggio').val();                 // memorizzo il valore di input
-        nuovo(contenutoMessaggio,'inviato');                            // genero il mio messaggio con la fz nuovo
-        setTimeout(nuovo('Bella!','ricevuto'),30000);                   // genero la risposta automatica con la fz nuovo - NOTA: NON FUNZIONA IL DELAY
-        $('#messaggio').val('');                                                // pulisco il campo di input
+        if (contenutoMessaggio != ''){                                  // se il contenuto dell'input non è vuoto
+            nuovo(contenutoMessaggio,'inviato');                        // genero il mio messaggio con la fz nuovo
+            var messaggioRisposta = nuovo('Bella!','ricevuto');
+            setTimeout(messaggioRisposta,30000);                        // genero la risposta automatica con la fz nuovo - NOTA: NON FUNZIONA IL DELAY
+            $('#messaggio').val('');                                    // pulisco il campo di input
+            $('.conversazione.active').scrollTop(2000);                 // scrollo per vedere subito i nuovi messaggi
+        }
     }
 }
 
@@ -51,9 +55,9 @@ function oraInvio(){
 
 // fz per generare un nuovo messaggio (contenuto e classe da definire)
 function nuovo(contenuto,classeCss){
-    var cloneTemplateMessaggio = $('#template-messaggio .riga-messaggio').clone();  // clono il template del messaggio
+    var cloneTemplateMessaggio = $('.conversazione.active #template-messaggio .riga-messaggio').clone();  // clono il template del messaggio
     cloneTemplateMessaggio.find('.testo-messaggio').append(contenuto);              // appendo in p il contenuto
     cloneTemplateMessaggio.find('.messaggio').addClass(classeCss);                  // aggiungo la classeCss per personalizzare il css
     cloneTemplateMessaggio.find('.ora-messaggio').append(oraInvio());               // aggiungo l'ora di invio
-    $('#conversazione').append(cloneTemplateMessaggio);                             // appendo il messaggio creato in #conversazione
+    $('.conversazione.active').append(cloneTemplateMessaggio);                             // appendo il messaggio creato in .conversazione
 }

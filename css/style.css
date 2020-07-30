@@ -94,7 +94,7 @@ body{
     color:grey;
 }
 
-.chat:hover{
+.chat:hover, .chat.active{
     background-color: #e9ebea;
 }
 
@@ -194,10 +194,15 @@ input:focus{
     background-position: center;
 }
 
-#conversazione{
+.conversazione{
+    display:none;
     height:calc(100% - 70px - 70px);
     padding:30px 40px;
     overflow-y: scroll;
+}
+
+.conversazione.active{
+    display:block;
 }
 
 .riga-messaggio{
@@ -258,4 +263,5 @@ input:focus{
 
 PERCHE
 - ho dovuto aggiungere position, right, e width a #strumenti?
+- se invio cliccando sull'aeroplanino dopo mi invia una lettera per volta?
  */
