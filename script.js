@@ -30,8 +30,9 @@ function nuovoMessaggio(){
             var messaggioRisposta = nuovo('Bella!','ricevuto');
             setTimeout(messaggioRisposta,30000);                        // genero la risposta automatica con la fz nuovo - NOTA: NON FUNZIONA IL DELAY
             $('#messaggio').val('');                                    // pulisco il campo di input
-            $('.conversazione.active').scrollTop(2000);                 // scrollo per vedere subito i nuovi messaggi
+            $('.scambio.active .conversazione').scrollTop(2000);                 // scrollo per vedere subito i nuovi messaggi
         }
+        invio = false;
     }
 }
 
@@ -55,9 +56,9 @@ function oraInvio(){
 
 // fz per generare un nuovo messaggio (contenuto e classe da definire)
 function nuovo(contenuto,classeCss){
-    var cloneTemplateMessaggio = $('.conversazione.active #template-messaggio .riga-messaggio').clone();  // clono il template del messaggio
+    var cloneTemplateMessaggio = $('.scambio.active #template-messaggio .riga-messaggio').clone();  // clono il template del messaggio
     cloneTemplateMessaggio.find('.testo-messaggio').append(contenuto);              // appendo in p il contenuto
     cloneTemplateMessaggio.find('.messaggio').addClass(classeCss);                  // aggiungo la classeCss per personalizzare il css
     cloneTemplateMessaggio.find('.ora-messaggio').append(oraInvio());               // aggiungo l'ora di invio
-    $('.conversazione.active').append(cloneTemplateMessaggio);                             // appendo il messaggio creato in .conversazione
+    $('.scambio.active .conversazione').append(cloneTemplateMessaggio);                             // appendo il messaggio creato in .conversazione
 }

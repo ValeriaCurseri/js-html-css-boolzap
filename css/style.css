@@ -194,15 +194,19 @@ input:focus{
     background-position: center;
 }
 
+
 .conversazione{
-    display:none;
-    height:calc(100% - 70px - 70px);
+    height:calc(100% - 70px);
     padding:30px 40px;
     overflow-y: scroll;
 }
+.scambio{
+    display:none;
+}
 
-.conversazione.active{
+.scambio.active{
     display:block;
+    height: calc(100% - 70px);
 }
 
 .riga-messaggio{
@@ -263,5 +267,4 @@ input:focus{
 
 PERCHE
 - ho dovuto aggiungere position, right, e width a #strumenti?
-- se invio cliccando sull'aeroplanino dopo mi invia una lettera per volta?
  */
