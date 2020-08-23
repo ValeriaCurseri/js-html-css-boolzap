@@ -46,12 +46,9 @@ $(document).ready(function(){
         $('#chat .header .nome').text(nome);                                        // B9. lo inserisco nell'header con .text()
         var ora = $('#cronologia-chat .chat.active .ultimo-accesso').text();        // B10. memorizzo l'ora dell'ultima connessione della chat cliccata
         $('#chat .header .ultimo-accesso').text(ora);                               // B11. la inserisco nell'header con .text()
-        var img = $('#cronologia-chat .chat.active img').attr('src');    // memorizzo l'attributo src dell'immagine della chat cliccata
-        $('#chat .header .img').attr('src', img);    // lo sostituisco all'attributo search già presente nell'header
-
-
+        var img = $('#cronologia-chat .chat.active img').attr('src');               // B12. memorizzo l'attributo src dell'immagine della chat cliccata
+        $('#chat .header img').attr('src', img);                                    // B13 .lo sostituisco all'attributo search già presente nell'header
     });
-
 })
 
 // ***** funzioni ***** //
