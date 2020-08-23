@@ -59,7 +59,8 @@ body{
 }
 
 .foto-profilo img{
-    height:inherit;
+    height:60px;
+    width:60px;
     border-radius: 50px;
 
 }
@@ -200,13 +201,13 @@ input:focus{
     padding:30px 40px;
     overflow-y: scroll;
 }
-.scambio{
+.conversazione{
     display:none;
 }
 
-.scambio.active{
+.conversazione.active{
     display:block;
-    height: calc(100% - 70px);
+    height: calc(100% - 140px);
 }
 
 .riga-messaggio{
